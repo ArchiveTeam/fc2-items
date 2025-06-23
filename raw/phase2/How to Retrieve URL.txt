@@ -1,0 +1,125 @@
+How to Retrieve URL
+
+1. Search Pages
+To retrieve search results, send a GET request with all parameters included in the URL's query string.
+Search results are displayed 10 per page.
+
+Example URL Structure:
+[Search Page URL]?searchstring=&categoryid=all&action=searchengine&subaction=search&startindex=0
+
+To paginate through the results, increment the startindex parameter by 10 for each subsequent request (e.g., 0, 10, 20, ...).
+The advantage of this method is that it allows you to archive each search results page individually.
+
+2. Category Pages
+To access items by category, send a GET request to the following URL structure, where the categoryid can be all or a number from 1 to 25.
+[Search Page URL]?action=searchengine&subaction=viewcategory&categoryid={ID}
+Pagination for categories also uses the startindex parameter, but it begins at 1. Since a maximum of 20 items are displayed per category, the only values you will need are startindex=1 for the first page and startindex=11 for the second.
+
+3. Ranking Pages
+The Ranking Page contains a complete list of links to the daily, weekly, monthly, and total rankings for every category on the site.
+By accessing all of these links, you can retrieve the URLs for the individual websites listed in the rankings.
+The content of a ranking page is determined by its numeric path ID (e.g., /003/, /004/), not the domain name.
+For example, the same content will be displayed whether you use `fc2web.com` or `gooside.com`, as long as the ID in the path is the same.  
+If a ranking page was inaccessible on a specific domain, it has been replaced with a working alternative using `fc2web.com`.
+
+4. Summary
+The three approaches described above should be sufficient to collect the vast majority of URLs.
+
+All services listed in this document will be discontinued on June 30, 2025.
+Official Announcement:
+https://fc2information.blog.fc2.com/blog-entry-2312.html
+Reference for other services:
+For services that are also ending but were not included in the official announcement, the following unofficial source was referenced:
+https://tyousen.nomaki.jp/oldfc2/
+
+
+Regarding the URL formats, all variations link to the same page.
+For example:
+http://canan.fc2web.com/ and http://canan.sugoihp.com/ both link to the same page.
+Similarly, http://bouringu.finito.fc2.com/, http://bouringu.finito-web.com/, and http://finito-web.com/bouringu all display the same content when accessed.
+
+-------------------------------------------
+FC2WEB
+URL Format: {username}.fc2web.com or {username}.sugoihp.com
+Search Page:  http://cgiserv01.fc2web.com/cgi-bin/se.cgi
+Ranking Page: http://fc2web.com/g-i-m-g-s/top/003/
+
+GOOSIDE
+URL Format: {username}.gooside.com
+Search Page:  http://cgiserv01.gooside.com/cgi-bin/se.cgi
+Ranking Page: http://gooside.com/g-i-m-g-s/top/004/
+
+k-free.net
+URL Format: {username}.k-free.net
+Search Page:  http://cgiserv01.k-free.net/cgi-bin/se.cgi
+Ranking Page: http://k-free.net/g-i-m-g-s/top/005/
+
+Easter
+URL Format: {username}.easter.ne.jp
+Search Page:  http://cgiserv01.easter.ne.jp/cgi-bin/se.cgi
+Ranking Page: http://easter.ne.jp/g-i-m-g-s/top/006/
+
+MUVC
+URL Format: {username}.muvc.com or {username}.muvc.net
+Search Page:  http://cgiserv01.muvc.net/cgi-bin/se.cgi
+Ranking Page: http://muvc.net/g-i-m-g-s/top/007/
+
+55 STREET
+URL Format: {username}.55street.net
+Search Page:  http://cgiserv01.55street.net/cgi-bin/se.cgi
+Ranking Page: http://55street.net/g-i-m-g-s/top/008/
+
+ZERO_CITY.com
+URL Format: {username}.zero-city.com
+Search Page:  http://cgiserv01.zero-city.com/cgi-bin/se.cgi
+Ranking Page: http://zero-city.com/g-i-m-g-s/top/009/
+
+OJIJI.NET
+URL Format: {username}.ojiji.net
+Search Page:  http://cgiserv01.ojiji.net/cgi-bin/se.cgi
+Ranking Page: http://ojiji.net/g-i-m-g-s/top/010/
+
+K-Server
+URL Format: {username}.k-server.org
+Search Page:  http://cgiserv01.k-server.org/cgi-bin/se.cgi
+Ranking Page: http://k-server.org/g-i-m-g-s/top/011/
+
+Zero-yen.com
+URL Format: {username}.zero-yen.com
+Search Page:  http://cgiserv01.zero-yen.com/cgi-bin/se.cgi
+Ranking Page: http://zero-yen.com/g-i-m-g-s/top/012/
+
+h.fc2.com (Note: Archiving via the WBM results in a 403 error.)
+URL Format: {username}.h.fc2.com
+Search Page:  http://cgiserv01.h.fc2.com/cgi-bin/se.cgi
+Ranking Page: http://fc2web.com/g-i-m-g-s/top/013/
+
+iui.fc2.com
+URL Format: {username}.iui.fc2.com
+Search Page:  http://cgiserv01.iui.fc2.com/cgi-bin/se.cgi
+Ranking Page: http://fc2web.com/g-i-m-g-s/top/014/
+
+happy-web.fc2.com
+URL Format: {username}.happy-web.fc2.com
+Search Page:  http://cgiserv01.happy-web.fc2.com/cgi-bin/se.cgi
+Ranking Page: http://fc2web.com/g-i-m-g-s/top/015/
+
+KTNET
+URL Format: {username}.kt.fc2.com
+Search Page:  http://cgiserv01.kt.fc2.com/cgi-bin/se.cgi
+Ranking Page: http://fc2web.com/g-i-m-g-s/top/016/
+
+Finito
+URL Format: finito-web.com/{username}/ or {username}.finito-web.com or {username}.finito.fc2.com
+Search Page:  http://cgiserv01.finito.fc2.com/cgi-bin/se.cgi
+Ranking Page: http://fc2web.com/g-i-m-g-s/top/018/
+
+KTplan
+URL Format: {username}.ktplan.net or {username}.ktplan.fc2.com
+Search Page:  http://cgiserv01.ktplan.fc2.com/cgi-bin/se.cgi
+Ranking Page: http://ktplan.fc2.com/g-i-m-g-s/top/019/
+
+PIMP.FC2
+URL Format: {username}.pimp.fc2.com
+Search Page:  http://cgiserv01.pimp.fc2.com/cgi-bin/se.cgi
+Ranking Page: http://pimp.fc2.com/g-i-m-g-s/top/020/

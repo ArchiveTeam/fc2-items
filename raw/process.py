@@ -1,3 +1,4 @@
+import html
 import re
 import sys
 
@@ -23,7 +24,7 @@ def main(filepath: str):
             else:
                 continue
             if re.search(r'^https?://[^/]*fc2\.com', url):
-                fout.write('url:{}\n'.format(url))
+                fout.write('url:{}\n'.format(html.unescape(url)))
             else:
                 print('Skipping unrelated URL {}.'.format(url))
 
